@@ -142,6 +142,9 @@ services:
        -E output.elasticsearch.username=elastic
        -E setup.kibana.host=kibana:5601
        -E output.elasticsearch.ssl.certificate_authorities=/etc/pki/root/ca/ca.crt
+       -E apm-server.rum.source_mapping.enabled=true
+       -E apm-server.rum.source_mapping.cache.expiration=5m
+
 volumes:
   certs:
     driver: local
